@@ -1,5 +1,15 @@
 //to create an app
-const app = Vue.createApp()
+const app = Vue.createApp({
+    //can set up any data or functions
+    //to react to events we want
+
+    //can also specify the component template i.e.
+    //the component that will be rendered inside the app element
+
+    //do this by creating the template property
+    //which wil be a string
+    template: '<h2>I am a template</h2>'
+})
 
 //tells the app at what point or
 //where to mount the application
