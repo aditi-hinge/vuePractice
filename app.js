@@ -8,7 +8,9 @@ const app = Vue.createApp({
 
     //do this by creating the template property
     //which wil be a string
-    template: '<h2>I am a template</h2>'
+    // template: '<h2>I am a template</h2>'
+    //but because creating templates here can get messy,
+    //it is better to add the template directly
 })
 
 //tells the app at what point or
