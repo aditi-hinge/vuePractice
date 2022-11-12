@@ -1,18 +1,23 @@
 const list = Vue.createApp({
     data() {
         return {
+            urlWebsite:'https://www.winxclub.com/en',
+            urlEveryoneTogether: 'https://images.app.goo.gl/wW2NR4HJDrQ2otYPA',
             fairies:[
                 {
                     name: 'bloom',
-                    colour: 'blue'
+                    colour: 'blue',
+                    img: './assets/bloom.jpg'
                 },
                 {
                     name: 'stella',
-                    colour: 'yellow'
+                    colour: 'yellow',
+                    img: './assets/stella.jpg'
                 },
                 {
                     name: 'musa',
-                    colour: 'red'
+                    colour: 'red',
+                    img: './assets/musa.png'
                 }
             ]
         }

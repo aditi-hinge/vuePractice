@@ -99,10 +99,23 @@
         <h2>List of winx fairies</h2>
         <ul>
             <li v-for="fairy in fairies">
+                <img :src="fairy.img" :alt="fairy.name" class="winx">
                 <h3>{{ fairy.name }}</h3>
                 <p>{{ fairy.colour }}</p>
             </li>
         </ul>
+        <a v-bind:href="urlWebsite" target="_blank">Click link for website</a>
+        <br>
+        <a :href="urlEveryoneTogether" target="_blank">Click link for a group picture!</a>
+        <!-- 
+        Attribute binding
+            1. When we bind dynamic values to html attributes
+            2. To insert an url into the href tag, we have to do attribute binding
+            3. use v-bind
+            4. add colon :
+            5. Add whatever data attribute to it, like href
+            6. because v-bind is used a lot, a colon : can be used as a replacement
+    -->
     </div>
     <script src="./app.js"></script>
     <script src="./list.js"></script>
