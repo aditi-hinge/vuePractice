@@ -71,6 +71,18 @@
                 when the v-if is considered false, it executes v-else 
             -->
         </button>
+
+        <!-- Conditional rendering using v-show -->
+        <div v-show="showMessage">Currently showing books</div>
+
+        <!-- 
+            Difference between v-show and v-if
+                1. It essentially does the same thing, but in a different way
+                2. v-if takes out the element from the DOM completely when false, and reinserts it when true
+                3. v-show uses CSS. display-block if true or display-none when false
+                4. Adding and removing something from DOM is more time consuming and more expensive in terms of performace, tham hiding and showing in CSS
+                5. So, if there is content that uses hide/show a lot like drop-down content or nav-links, v-show would be better but up to the coder
+         -->
     </div>
     <script src="./app.js"></script>
 </body>
