@@ -24,6 +24,8 @@ const app = Vue.createApp({
             author: 'George Orwell',
             publicationYear: 1949,
             showMessage: true,
+            x: 0,
+            y: 0
         }
     },
     //OnClick events
@@ -38,6 +40,15 @@ const app = Vue.createApp({
         },
         toggleShowMessage() {
             this.showMessage = !this.showMessage
+        },
+
+        //mouse events
+        handleEvent(e) {
+            console.log(e, e.type)
+        },
+        handleMouseMove(e) {
+            this.x = e.offsetX
+            this.y = e.offsetY
         }
     }
 })

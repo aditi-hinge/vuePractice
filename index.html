@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Vue</title>
+    <link rel="stylesheet" href="./styles.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
@@ -83,6 +84,13 @@
                 4. Adding and removing something from DOM is more time consuming and more expensive in terms of performace, tham hiding and showing in CSS
                 5. So, if there is content that uses hide/show a lot like drop-down content or nav-links, v-show would be better but up to the coder
          -->
+
+
+         <!-- Mouse events -->
+         <div class="box" @mouseover="handleEvent">mouse over</div>
+         <div class="box" @mouseleave="handleEvent">mouse leave</div>
+         <div class="box" @dblclick="handleEvent">double click</div>
+         <div class="box" @mousemove="handleMouseMove">position {{ x }} - {{ y }}</div>
     </div>
     <script src="./app.js"></script>
 </body>
