@@ -53,12 +53,24 @@
                 1. very easy in vue, [v-if=""] is the syntax
                 2. true shows the heading, false does not show the heading
         -->
-        <h6 v-if="showMessage">I love reading books</h6>
+        <h4 v-if="showMessage">I love reading books</h4>
         <!-- 
             In the data function,
             If showMessage is set to false then the above heading is not shown
             If it is set to true then it is shown
         -->
+
+        <!-- Toggle conditional rendering -->
+        <button @click="toggleShowMessage">
+            <span v-if="showMessage">Hide Message</span>
+            <span v-if="!showMessage">Show Message</span>
+            <!-- 
+                OR instead of v-if="!showMessage", v-else can be used
+                for example
+                <span v-else>Show Message</span>
+                when the v-if is considered false, it executes v-else 
+            -->
+        </button>
     </div>
     <script src="./app.js"></script>
 </body>

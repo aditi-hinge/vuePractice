@@ -35,6 +35,9 @@ const app = Vue.createApp({
         },
         changeYear(year) {
             this.publicationYear = year 
+        },
+        toggleShowMessage() {
+            this.showMessage = !this.showMessage
         }
     }
 })
