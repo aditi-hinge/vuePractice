@@ -92,6 +92,19 @@
          <div class="box" @dblclick="handleEvent">double click</div>
          <div class="box" @mousemove="handleMouseMove">position {{ x }} - {{ y }}</div>
     </div>
+    
+    <br>
+    <!-- Outputting Lists [contd. in list.js] -->
+    <div id="list">
+        <h2>List of winx fairies</h2>
+        <ul>
+            <li v-for="fairy in fairies">
+                <h3>{{ fairy.name }}</h3>
+                <p>{{ fairy.colour }}</p>
+            </li>
+        </ul>
+    </div>
     <script src="./app.js"></script>
+    <script src="./list.js"></script>
 </body>
 </html>
