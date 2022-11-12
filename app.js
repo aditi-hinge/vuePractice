@@ -24,6 +24,17 @@ const app = Vue.createApp({
             author: 'George Orwell',
             publicationYear: 1949
         }
+    },
+    //OnClick events
+    //create a method by adding another function property either above or below the data function
+    methods: {
+        //any functions or methods that we want to run for this component, we place inside here 
+        changeAuthor() {
+            this.author = 'J.K. Rowling'
+        },
+        changeYear(year) {
+            this.publicationYear = year 
+        }
     }
 })
 

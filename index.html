@@ -17,8 +17,37 @@
         <!-- <h2>I am a template</h2> -->
 
         <!-- Instead of hardcoding a property, the value can be dynamically inserted by writing the property name that matches that in the app.js file in double curly braces-->
-        <p>{{ title }} by {{ author }}, {{ publicationYear }}.</p>
+        <p>{{ title }} by {{ author }}, published in the year {{ publicationYear }}.</p>
         <!-- Outputs> 1984 by George Orwell, 1949. -->
+
+        <!-- 
+            Creating click events 
+            1. create a button
+            2. create a directive called v-on; v is for vue and on is for on events like onclick or onmouseover
+            3. add a colon :
+            4. specify the click event example :click
+            5. set some value it to it using double quotes to run a JS code, this code will run whenever a user clicks on this button
+            6. Two methods to carry out this onclick funtion> Inside the template [in the html file] or inside the function [in the app.js file]
+            7. For inside the template> 
+                a. Write the property name inside the double quotes. Curly braces are not needed as it is JS code and we don't have to print the value
+                b. write ++ to increment the value by 1
+                c. Also can be done for decreasing the age by using --
+            8. Because we react to event so much, the Vue team made a shotrcut for it called @. So v-on can be replaced by @ and it means the same thing
+            9. Second menthod> Firing a click event inside the data function [shown in app.js file]    
+        -->
+        <button v-on:click="publicationYear++">Increase Year of Publication </button>
+        <button v-on:click="publicationYear--">Decrease Year of Publication </button>
+            
+        <!-- Click events can also be fired on elements other than a button -->
+        <div @click="title = 'Harry Potter and the Goblet of Fire'">Change book title</div>
+        
+        <!-- Click event by data function -->
+        <div @click="changeAuthor">Change Author</div>
+
+        <!-- Passing arguments onto the funtion -->
+        <div @click="changeYear('2000')">Change Year</div>
+
+        <!-- After firing all the click functions the output looks like this : Harry Potter and the Goblet of Fire by J.K. Rowling, published in the year 2000. -->
     </div>
     <script src="./app.js"></script>
 </body>
