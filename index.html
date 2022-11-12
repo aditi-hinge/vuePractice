@@ -14,7 +14,11 @@
             creating the template directly which can be used to change values
             in the template dynamically by using Vue
         -->
-        <h2>I am a template</h2>
+        <!-- <h2>I am a template</h2> -->
+
+        <!-- Instead of hardcoding a property, the value can be dynamically inserted by writing the property name that matches that in the app.js file in double curly braces-->
+        <p>{{ title }} by {{ author }}, {{ publicationYear }}.</p>
+        <!-- Outputs> 1984 by George Orwell, 1949. -->
     </div>
     <script src="./app.js"></script>
 </body>
