@@ -22,7 +22,8 @@ const app = Vue.createApp({
         return {
             title: '1984',
             author: 'George Orwell',
-            publicationYear: 1949
+            publicationYear: 1949,
+            showMessage: true,
         }
     },
     //OnClick events

@@ -19,7 +19,6 @@
         <!-- Instead of hardcoding a property, the value can be dynamically inserted by writing the property name that matches that in the app.js file in double curly braces-->
         <p>{{ title }} by {{ author }}, published in the year {{ publicationYear }}.</p>
         <!-- Outputs> 1984 by George Orwell, 1949. -->
-
         <!-- 
             Creating click events 
             1. create a button
@@ -48,6 +47,18 @@
         <div @click="changeYear('2000')">Change Year</div>
 
         <!-- After firing all the click functions the output looks like this : Harry Potter and the Goblet of Fire by J.K. Rowling, published in the year 2000. -->
+    
+        <!--
+            Conditional rendering
+                1. very easy in vue, [v-if=""] is the syntax
+                2. true shows the heading, false does not show the heading
+        -->
+        <h6 v-if="showMessage">I love reading books</h6>
+        <!-- 
+            In the data function,
+            If showMessage is set to false then the above heading is not shown
+            If it is set to true then it is shown
+        -->
     </div>
     <script src="./app.js"></script>
 </body>
